@@ -4,10 +4,16 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/cqrs-server-e2e"
+      "path": "./apps/cqrs-server"
     },
     {
-      "path": "./apps/cqrs-server"
+      "path": "./libs/abstract-interfaces"
+    },
+    {
+      "path": "./libs/event-publisher-kafka"
+    },
+    {
+      "path": "./libs/event-store/event-store-db"
     }
   ]
 }
