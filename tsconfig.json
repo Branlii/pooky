@@ -13,7 +13,7 @@
       "path": "./libs/event-publisher-kafka"
     },
     {
-      "path": "./libs/event-store/event-store-db"
+      "path": "./libs/event-store/kurrent"
     }
   ]
 }

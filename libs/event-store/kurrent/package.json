@@ -19,7 +19,7 @@
     "name": "event-store-event-store-db"
   },
   "dependencies": {
-    "@eventstore/db-client": "^6.2.1",
+    "@kurrent/kurrentdb-client": "^1.0.3",
     "tslib": "^2.3.0"
   }
 }

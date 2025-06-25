@@ -21,8 +21,8 @@
       "@pooky/event-publisher-kafka": [
         "libs/event-publisher/kafka/src/index.ts"
       ],
-      "@pooky/event-store-event-store-db": [
-        "libs/event-store/event-store-db/src/index.ts"
+      "@pooky/event-store-kurrent": [
+        "libs/event-store/kurrent/src/index.ts"
       ]
     }
   },
