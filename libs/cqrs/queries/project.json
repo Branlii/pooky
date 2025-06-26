@@ -1,0 +1,19 @@
+{
+  "name": "cqrs/queries",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/cqrs/queries/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/cqrs/queries",
+        "main": "libs/cqrs/queries/src/index.ts",
+        "tsConfig": "libs/cqrs/queries/tsconfig.lib.json",
+        "assets": ["libs/cqrs/queries/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

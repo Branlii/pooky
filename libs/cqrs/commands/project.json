@@ -1,0 +1,19 @@
+{
+  "name": "cqrs/commands",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/cqrs/commands/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/cqrs/commands",
+        "main": "libs/cqrs/commands/src/index.ts",
+        "tsConfig": "libs/cqrs/commands/tsconfig.lib.json",
+        "assets": ["libs/cqrs/commands/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

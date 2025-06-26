@@ -15,15 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pooky/abstract-interfaces": [
-        "libs/abstract/interfaces/src/index.ts"
-      ],
+      "@pooky/abstract-interfaces": ["libs/abstract/interfaces/src/index.ts"],
       "@pooky/event-dispatcher-kafka": [
         "libs/event-dispatcher/kafka/src/index.ts"
       ],
-      "@pooky/event-store-kurrent": [
-        "libs/event-store/kurrent/src/index.ts"
-      ]
+      "@pooky/event-store-kurrent": ["libs/event-store/kurrent/src/index.ts"],
+      "@pooky3/cqrs/commands": ["libs/cqrs/commands/src/index.ts"],
+      "@pooky3/cqrs/queries": ["libs/cqrs/queries/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
