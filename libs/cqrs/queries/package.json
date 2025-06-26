@@ -1,5 +1,5 @@
 {
-  "name": "@pooky3/cqrs/queries",
+  "name": "@pooky3/cqrs-queries",
   "version": "0.0.1",
   "private": true,
   "type": "commonjs",

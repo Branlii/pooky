@@ -1,4 +1,4 @@
-# cqrs/queries
+# cqrs-queries
 
 This library was generated with [Nx](https://nx.dev).
 
