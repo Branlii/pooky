@@ -1,5 +1,5 @@
 {
-  "name": "@pooky3/event-publisher-kafka",
+  "name": "@pooky3/event-dispatcher-kafka",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -16,7 +16,7 @@
     }
   },
   "nx": {
-    "name": "event-publisher-kafka"
+    "name": "event-dispatcher-kafka"
   },
   "dependencies": {
     "kafkajs": "^2.2.4",

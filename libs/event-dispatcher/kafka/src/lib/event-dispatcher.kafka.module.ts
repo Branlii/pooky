@@ -2,25 +2,25 @@ import { type DynamicModule, Module } from "@nestjs/common";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import { Kafka } from "kafkajs";
 import {
-	EVENT_PUBLISHER_CONFIG_TOKEN,
+	EVENT_DISPATCHER_CONFIG_TOKEN,
 	type KafkaConfig,
 	kafkaConfig,
-} from "./event-publisher.kafka.config.js";
-import { EVENT_PUBLISHER_TOKEN } from "./event-publisher.kafka.constants.js";
-import { EventPublisherKafkaService } from "./event-publisher.kafka.service.js";
+} from "./event-dispatcher.kafka.config";
+import { EVENT_DISPATCHER_TOKEN } from "./event-dispatcher.kafka.constants";
+import { EventDispatcherKafkaService } from "./event-dispatcher.kafka.service";
 
 @Module({})
-export class EventPublisherKafkaModule {
+export class EventDispatcherKafkaModule {
 	static register(): DynamicModule {
 		return {
-			module: EventPublisherKafkaModule,
+			module: EventDispatcherKafkaModule,
 			imports: [ConfigModule.forFeature(kafkaConfig)],
 			providers: [
 				{
-					provide: EventPublisherKafkaService,
+					provide: EventDispatcherKafkaService,
 					useFactory: (configService: ConfigService) => {
 						const config = configService.get<KafkaConfig>(
-							EVENT_PUBLISHER_CONFIG_TOKEN,
+							EVENT_DISPATCHER_CONFIG_TOKEN,
 						);
 
 						if (!config?.baseUrl) {
@@ -34,16 +34,16 @@ export class EventPublisherKafkaModule {
 						};
 
 						const kafka = new Kafka(kafkaOptions);
-						return new EventPublisherKafkaService(kafka);
+						return new EventDispatcherKafkaService(kafka);
 					},
 					inject: [ConfigService],
 				},
 				{
-					provide: EVENT_PUBLISHER_TOKEN,
-					useExisting: EventPublisherKafkaService,
+					provide: EVENT_DISPATCHER_TOKEN,
+					useExisting: EventDispatcherKafkaService,
 				},
 			],
-			exports: [EventPublisherKafkaService, EVENT_PUBLISHER_TOKEN],
+			exports: [EventDispatcherKafkaService, EVENT_DISPATCHER_TOKEN],
 		};
 	}
 }

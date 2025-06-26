@@ -10,7 +10,7 @@
       "path": "./libs/abstract-interfaces"
     },
     {
-      "path": "./libs/event-publisher-kafka"
+      "path": "./libs/event-dispatcher-kafka"
     },
     {
       "path": "./libs/event-store/kurrent"

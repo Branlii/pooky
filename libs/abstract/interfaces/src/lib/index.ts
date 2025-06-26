@@ -1,2 +1,2 @@
-export * from './IEventPublisher';
+export * from './IEventDispatcher';
 export * from './IEventStore';

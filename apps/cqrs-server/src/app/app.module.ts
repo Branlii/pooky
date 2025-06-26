@@ -1,12 +1,12 @@
 import { Module } from "@nestjs/common";
-import { EventPublisherKafkaModule } from "@pooky/event-publisher-kafka";
+import { EventDispatcherKafkaModule } from "@pooky/event-dispatcher-kafka";
 import { EventStoreKurrentModule } from "@pooky/event-store-kurrent";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 
 @Module({
 	imports: [
-		EventPublisherKafkaModule.register(),
+		EventDispatcherKafkaModule.register(),
 		EventStoreKurrentModule.register(),
 	],
 	controllers: [AppController],
