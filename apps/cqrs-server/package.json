@@ -1,5 +1,5 @@
 {
-  "name": "@pooky3/cqrs-server",
+  "name": "@pooky/cqrs-server",
   "version": "0.0.1",
   "private": true,
   "nx": {
@@ -28,15 +28,15 @@
           "build"
         ],
         "options": {
-          "buildTarget": "@pooky3/cqrs-server:build",
+          "buildTarget": "@pooky/cqrs-server:build",
           "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "@pooky3/cqrs-server:build:development"
+            "buildTarget": "@pooky/cqrs-server:build:development"
           },
           "production": {
-            "buildTarget": "@pooky3/cqrs-server:build:production"
+            "buildTarget": "@pooky/cqrs-server:build:production"
           }
         }
       },
@@ -49,7 +49,7 @@
         "dependsOn": [
           "build"
         ],
-        "command": "docker build -f apps/cqrs-server/Dockerfile . -t pooky3-cqrs-server"
+        "command": "docker build -f apps/cqrs-server/Dockerfile . -t pooky-cqrs-server"
       }
     }
   }

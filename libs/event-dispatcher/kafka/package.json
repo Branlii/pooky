@@ -1,5 +1,5 @@
 {
-  "name": "@pooky3/event-dispatcher-kafka",
+  "name": "@pooky/event-dispatcher-kafka",
   "version": "0.0.1",
   "private": true,
   "type": "module",

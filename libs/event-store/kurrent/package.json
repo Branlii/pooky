@@ -1,5 +1,5 @@
 {
-  "name": "@pooky3/event-store-event-store-db",
+  "name": "@pooky/event-store-event-store-db",
   "version": "0.0.1",
   "private": true,
   "type": "module",
