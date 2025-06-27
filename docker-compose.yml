@@ -31,6 +31,21 @@ services:
     networks:
       - pooky-network
 
+  postgresql:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: pooky
+      POSTGRES_USER: pooky_user
+      POSTGRES_PASSWORD: pooky_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - type: volume
+        source: postgresql-volume-data
+        target: /var/lib/postgresql/data
+    networks:
+      - pooky-network
+
   kurrentdb:
     image: docker.kurrent.io/kurrent-latest/kurrentdb:latest
     environment:
@@ -57,5 +72,6 @@ networks:
     driver: bridge
 
 volumes:
+  postgresql-volume-data:
   kurrentdb-volume-data:
   kurrentdb-volume-logs:
