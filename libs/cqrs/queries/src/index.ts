@@ -1,1 +1,1 @@
-export * from './lib/cqrs/queries';
+export * from "./lib";
