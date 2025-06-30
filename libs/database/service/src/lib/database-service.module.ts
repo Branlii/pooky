@@ -1,6 +1,6 @@
 import { type DynamicModule, Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
-import { entities } from "@pooky/database-entities";
+import { allEntities } from "@pooky/database-entities";
 
 @Module({})
 export class DatabaseServiceModule {
@@ -36,9 +36,9 @@ export class DatabaseServiceModule {
 					username: process.env.DB_USERNAME,
 					password: process.env.DB_PASSWORD,
 					database: process.env.DB_NAME,
-					entities,
+					entities: allEntities,
 					synchronize: process.env.NODE_ENV !== "production",
-					logging: process.env.NODE_ENV === "development",
+					logging: process.env.DB_LOGGING === "true",
 					ssl:
 						process.env.DB_SSL === "true"
 							? { rejectUnauthorized: false }

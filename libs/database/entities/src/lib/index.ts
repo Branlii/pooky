@@ -1,2 +1,2 @@
-import { default as ModuleEntity } from "./module.entity";
-export const entities = [ModuleEntity];
+export * from "./all.entities";
+export { default as ModuleEntity } from "./module.entity";
