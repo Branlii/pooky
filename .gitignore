@@ -47,3 +47,7 @@ test-output
 
 # Environment variables
 .env
+
+# Next.js
+.next
+out
