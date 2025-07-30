@@ -1,5 +1,5 @@
 {
-  "name": "@pooky/event-store-event-store-db",
+  "name": "@pooky/event-store-kurrent",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -16,7 +16,7 @@
     }
   },
   "nx": {
-    "name": "event-store-event-store-db"
+    "name": "event-store-kurrent"
   },
   "dependencies": {
     "@kurrent/kurrentdb-client": "^1.0.3",
